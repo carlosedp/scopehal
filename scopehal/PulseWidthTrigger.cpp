@@ -32,6 +32,7 @@
 #include "LeCroyOscilloscope.h"
 #include "TektronixOscilloscope.h"
 #include "SiglentSCPIOscilloscope.h"
+#include "HantekSCPIOscilloscope.h"
 
 using namespace std;
 
@@ -58,6 +59,11 @@ PulseWidthTrigger::PulseWidthTrigger(Oscilloscope* scope)
 		m_parameters[m_conditionname].AddEnumValue("Equal", CONDITION_EQUAL);
 		m_parameters[m_conditionname].AddEnumValue("Not equal", CONDITION_NOT_EQUAL);
 		m_parameters[m_conditionname].AddEnumValue("Not between", CONDITION_NOT_BETWEEN);
+	}
+	if(dynamic_cast<HantekSCPIOscilloscope*>(scope) != NULL)
+	{
+		m_parameters[m_conditionname].AddEnumValue("Equal", CONDITION_EQUAL);
+		m_parameters[m_conditionname].AddEnumValue("Not equal", CONDITION_NOT_EQUAL);
 	}
 }
 

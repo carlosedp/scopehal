@@ -93,6 +93,7 @@ set(SCOPEHAL_SOURCES
 	PicoOscilloscope.cpp
 	RigolOscilloscope.cpp
 	SiglentSCPIOscilloscope.cpp
+	HantekSCPIOscilloscope.cpp
 	SignalGeneratorOscilloscope.cpp
 	TektronixOscilloscope.cpp
 	RohdeSchwarzOscilloscope.cpp
