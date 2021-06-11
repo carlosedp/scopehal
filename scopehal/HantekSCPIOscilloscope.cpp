@@ -751,6 +751,7 @@ bool HantekSCPIOscilloscope::ReadWavedescs(
 	return true;
 }
 
+// TODO!!!
 time_t HantekSCPIOscilloscope::ExtractTimestamp(unsigned char* wavedesc, double& basetime)
 {
 	/*
@@ -806,6 +807,7 @@ time_t HantekSCPIOscilloscope::ExtractTimestamp(unsigned char* wavedesc, double&
 	return mktime(&tstruc);
 }
 
+// TODO!!!
 vector<WaveformBase*> HantekSCPIOscilloscope::ProcessAnalogWaveform(const char* data,
 	size_t datalen,
 	char* wavedesc,
@@ -921,6 +923,7 @@ vector<WaveformBase*> HantekSCPIOscilloscope::ProcessAnalogWaveform(const char* 
 	return ret;
 }
 
+// TODO!!!
 bool HantekSCPIOscilloscope::AcquireData()
 {
 	//State for this acquisition (may be more than one waveform)
